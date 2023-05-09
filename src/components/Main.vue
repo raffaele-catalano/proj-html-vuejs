@@ -1,11 +1,15 @@
 <script>
+import Cards from './partials/Main-first-section.vue'
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        Cards,
+    }
 }
 </script>
 
 <template>
-<h1>Main</h1>
+<Cards />
 </template>
 
 <style lang="scss" scoped>
