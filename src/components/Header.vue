@@ -19,10 +19,10 @@ export default {
                 <li><a href="#">TV Series</a></li>
                 <li><a href="#">Popular Movies</a></li>
                 <li><a href="#">Upcoming</a></li>
+                <div class="hamburger-menu_container">
+                    <a href="#"><img src="../assets/svg/svg-1.svg" alt="hamburger-menu"></a> 
+                </div>
             </ul>
-            <div class="hamburger-menu_container">
-                <a href="#"><img src="../assets/svg/svg-1.svg" alt="hamburger-menu"></a> 
-            </div>
         </div>
     </div>
 
@@ -30,27 +30,27 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
 header {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     height: 100px;
     background-color: #FFFFFF;
-    // vertical-align: middle;
     //debug
-    border: 1px solid limegreen;
+    border-bottom: 1px solid limegreen;
     .logo_container{
         display: flex;
         align-items: center;
-        margin: 0 0 10px 15px;
+        margin-left: 15px;
         //debug
         // border: 1px solid red;
     }
 
     .menu_container {
+        height: 100px;
         .nav-bar {
             display: flex;
-            align-items: center;
             height: 100%;
             margin-right: 15px;
             .nav-list {
@@ -58,22 +58,24 @@ header {
                 align-items: center;
                 height: 100%;
                 list-style: none;
-
+                gap: 1.5rem;
+                //debug
+                // border: 1px solid red;
+                
                 li {
                     margin: 0 20px;
 
                     a {
+                        font-weight: 700;
+                        font-size: 0.8rem;
                         text-decoration: none;
                         text-transform: uppercase;
                         color: #000000;
                     }
                 }
             }
-            .hamburger-menu_container{
-                margin-bottom: 17px;
-                //debug
-                // border: 1px solid red;
-            }
+            // .hamburger-menu_container{
+            // }
         }
     }
 }
