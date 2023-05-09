@@ -30,8 +30,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../../scss/main.scss" as *;
-@use "../../scss/partials/typography" as *;
+// @use "../../scss/main.scss" as *;
+// @use "../../scss/partials/typography" as *;
 
 .cards {
     width: 100%;
