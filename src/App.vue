@@ -20,5 +20,6 @@ export default {
 
 <style lang="scss">
 @use "./scss/main.scss" as *;
+@use "./scss/partials/typography" as *;
 
 </style>

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/mulish": "^4.5.14",
     "bootstrap": "^5.2.3",
     "vue": "^3.2.47"
   },
