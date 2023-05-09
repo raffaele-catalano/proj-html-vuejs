@@ -41,7 +41,6 @@ export default {
             // border: 2px solid blue;
             img {
                 width: 100%;
-                object-fit: contain;
             }
         }
     }

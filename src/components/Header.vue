@@ -19,8 +19,8 @@ export default {
                 <li><a href="#">TV Series</a></li>
                 <li><a href="#">Popular Movies</a></li>
                 <li><a href="#">Upcoming</a></li>
-                <div class="hamburger-menu_container">
-                    <a href="#"><img src="../assets/svg/svg-1.svg" alt="hamburger-menu"></a> 
+                <div class="dotted-menu_container">
+                    <a href="#"><img src="../assets/svg/dotted_menu.svg" alt="dotted-menu"></a> 
                 </div>
             </ul>
         </div>
@@ -74,8 +74,6 @@ header {
                     }
                 }
             }
-            // .hamburger-menu_container{
-            // }
         }
     }
 }
