@@ -70,6 +70,7 @@ header {
                         font-size: 0.8rem;
                         text-decoration: none;
                         text-transform: uppercase;
+                        letter-spacing: .1rem;
                         color: #000000;
                     }
                 }

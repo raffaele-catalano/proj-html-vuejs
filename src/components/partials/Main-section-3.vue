@@ -1,0 +1,60 @@
+<script>
+export default {
+    name: 'Contact',
+}
+</script>
+
+<template>
+<section>
+    <div class="contact_container">
+        <h2>Want to work with us? Send us <span class="a-message">a message!</span></h2>
+        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio eos quod ea, quasi animi necessitatibus ullam est ab, neque similique nesciunt dolores autem? Nihil alias eum quam sapiente at!</p>
+        <button type="button" class="btn text-uppercase">contact</button>
+    </div>
+</section>
+</template>
+
+<style lang="scss" scoped>
+
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 530px;
+    background-image: url(../../assets/img/h-2-background-1.jpg);
+    //debug
+    border: 1px solid black;
+    margin-bottom: 50px;
+    .contact_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        //debug
+
+        h2 {
+            font-size: 4rem;
+            margin-bottom: 25px;
+            .a-message {
+                font-weight: 900;
+                font-style: italic;
+                font-family: "Playfair Display", serif !important;
+            }
+        }
+        p {
+            color: gray;
+            font-size: 1.2rem;
+        }
+        .btn{
+            background-color: #D8F0E3;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: .2rem;
+            padding: 16px 60px;
+        }
+    }
+}
+
+</style>
