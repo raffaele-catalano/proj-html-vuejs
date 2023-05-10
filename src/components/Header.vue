@@ -112,7 +112,7 @@ header {
                     
                     &:hover {
                         .dropdown_menu{
-                            opacity: 1;
+                            display: block;
                         }
                     }
                     
@@ -126,7 +126,7 @@ header {
                     }
                     
                     .dropdown_menu {
-                        opacity: 0;
+                        display: none;
                         top: 100%;
                         min-width: 200px;
                         background-color: #FCFAF6;
