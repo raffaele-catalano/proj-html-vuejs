@@ -27,7 +27,7 @@ section {
     width: 100%;
     height: 530px;
     background-image: url(../../assets/img/h-2-background-1.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
     //debug

@@ -131,7 +131,7 @@ section {
                     transition: all .5s;
 
                     &:hover {
-                        transform: scale(1.1);
+                        transform: scale(1.03);
                         cursor: pointer;
                     }
                 }
