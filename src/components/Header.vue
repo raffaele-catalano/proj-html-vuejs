@@ -37,8 +37,9 @@ header {
     width: 100%;
     height: 100px;
     background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
     //debug
-    border-bottom: 1px solid limegreen;
+    // border-bottom: 1px solid limegreen;
     .logo_container{
         display: flex;
         align-items: center;
