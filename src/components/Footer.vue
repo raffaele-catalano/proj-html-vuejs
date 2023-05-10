@@ -1,6 +1,13 @@
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    methods: {
+        scrollToTop() {
+            window-scrollTo ({
+                top: 0,
+            })
+        }
+    }
 }
 </script>
 
@@ -31,6 +38,11 @@ export default {
             </div>
         </div>
     </div>
+    <div class="pageUp_container">
+        <a href="#" @click="scrollToTop">
+            <img src="../assets/svg/arrow-up.svg" alt="arrow-up">
+        </a>
+    </div>
 </footer>
 </template>
 
@@ -56,7 +68,7 @@ footer {
         }
 
         .info_container {
-            width: 70%;
+            width: 60%;
             height: 100%;
             //debug
             // border: 1px solid black;
@@ -69,6 +81,32 @@ footer {
                 //debug
                 // border: 1px solid gold;
             }
+        }
+    }
+    .pageUp_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+        //debug
+        // border: 1px solid black;
+        
+        a {
+            cursor: pointer;
+            padding: 10px;
+            transition: all .5s;
+            // debug
+            // border: 1px solid red;
+            &:hover {
+                background-color: #F4CFC7;
+                border-radius: 50%;
+            }
+
+            img {
+                padding-right: 5px;
+                width: 120%;
+            }
+            
         }
     }
 }
