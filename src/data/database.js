@@ -1,6 +1,7 @@
 const menuHeader = [
     {
         label   : 'Home',
+        dropDownList: [],
         dropDown:[
             'Main Home',
             'Floating Portfolio',
@@ -16,6 +17,7 @@ const menuHeader = [
     },
     {
         label   : 'Pages',
+        dropDownList: [],
         dropDown: [
             'About Us',
             'About Me',
@@ -31,7 +33,8 @@ const menuHeader = [
     },
     {
         label   : 'Portfolio',
-        dropDown: [
+        dropDown: [],
+        dropDownList: [
             {
             label: 'Types', 
             links: [
@@ -90,6 +93,7 @@ const menuHeader = [
     },
     {
         label   : 'Blog',
+        dropDownList: [],
         dropDown: [
             'Right Sidebar',
             'Left Sidebar',
@@ -99,6 +103,7 @@ const menuHeader = [
     },
     {
         label   : 'Shop',
+        dropDownList: [],
         dropDown: [
             'Product List',
             'Product Single',
@@ -107,8 +112,9 @@ const menuHeader = [
         ]
     },
     {
-        label   : 'Classic',
-        dropDown: [
+        label   : 'Elements',
+        dropDown: [],
+        dropDownList: [
             {
             label: 'Types', 
             links: [
@@ -166,5 +172,6 @@ const menuHeader = [
     ]
     }
 ]
+
 
 export {menuHeader}
