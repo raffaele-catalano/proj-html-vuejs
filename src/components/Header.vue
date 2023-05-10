@@ -1,7 +1,12 @@
 <script>
 import { menuHeader } from '../data/database';
+import Jumbotron      from './partials/Jumbotron.vue';
+
 export default {
     name: 'Header',
+    components: {
+        Jumbotron
+    },
     data (){
         return {
             menuHeader,
@@ -58,8 +63,9 @@ export default {
             </ul>
         </div>
     </div>
-
 </header>
+<!-- INSERIRE QUI IL JUMBOTRON -->
+<Jumbotron />
 </template>
 
 <style lang="scss" scoped>
