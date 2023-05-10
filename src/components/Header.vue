@@ -14,11 +14,12 @@ export default {
     <div class="menu_container">
         <div class="nav-bar">
             <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">TV Series</a></li>
-                <li><a href="#">Popular Movies</a></li>
-                <li><a href="#">Upcoming</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#">pages</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">shop</a></li>
+                <li><a href="#">elements</a></li>
                 <div class="dotted-menu_container">
                     <a href="#"><img src="../assets/svg/dotted_menu.svg" alt="dotted-menu"></a> 
                 </div>
