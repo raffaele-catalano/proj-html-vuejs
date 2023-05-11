@@ -61,7 +61,7 @@ export default {
 
             <div class="images_container" :class="{'double': slide.image2 != ''}">
                 <img :src="getImage(`../../assets/img/img-Jumbotron/${slide.image}`)" alt="">
-                <img :src="getImage(`../../assets/img/img-Jumbotron/${slide.image2}`)" alt="">
+                <img v-if="slide.image2 != ''" :src="getImage(`../../assets/img/img-Jumbotron/${slide.image2}`)" alt="">
             </div>
         </swiper-slide>
 
@@ -128,20 +128,22 @@ export default {
                 }
             }
             .images_container {
+                display: flex;
+                align-items: center;
                 width: 50%;
                 height: 100%;
                 //debug
                 // border: 1px solid blue;
                 img{
-                    width: 100%;
-                    height: 100%;
+                    width: 80%;
+                    height: 80%;
                     object-fit: contain;
                 }
             }
             .images_container.double {
                 img {
-                    width: 50%;
-                    height: 100%;
+                    width: 40%;
+                    height: 80%;
                     object-fit: contain;
                 }
             }
