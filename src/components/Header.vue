@@ -1,11 +1,13 @@
 <script>
 import { menuHeader } from '../data/database';
 import Jumbotron      from './partials/Jumbotron.vue';
+import Offcanvas      from './partials/Offcanvas.vue';
 
 export default {
     name: 'Header',
     components: {
-        Jumbotron
+        Jumbotron,
+        Offcanvas
     },
     data (){
         return {
@@ -58,13 +60,15 @@ export default {
 
                 </li>
                 <div class="dotted-menu_container">
-                    <a href="#"><img src="../assets/svg/dotted_menu.svg" alt="dotted-menu"></a> 
+                    <a href="#offcanvas" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvas"><img src="../assets/svg/dotted_menu.svg" alt="dotted-menu"></a> 
+                    <!-- OFFCANVAS -->
+                    <Offcanvas />
                 </div>
             </ul>
         </div>
     </div>
 </header>
-<!-- INSERIRE QUI IL JUMBOTRON -->
+<!-- JUMBOTRON -->
 <Jumbotron />
 </template>
 
