@@ -68,6 +68,10 @@ export default {
                     opacity: 0;
                     transition: all .3s;
                 }
+                p {
+                    font-style: italic;
+                    font-family: "Playfair Display", serif !important;
+                }
             }
 
             img {

@@ -30,26 +30,25 @@ export default {
 
             <ul class="nav-list">
 
-                <li class="position-relative" v-for="(menuItem, index) in menuHeader" :key="index" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+                <li class="position-relative nav_item" v-for="(menuItem, index) in menuHeader" :key="index">
                     <a href="#">{{ menuItem.label }}</a>
                     <!-- inizio dropdown menu -->
                     <div class="dropdown_menu position-absolute" v-if="menuItem.dropDown">
-                        <ul class="list-unstyled">
+                        <ul class="list-unstyled dropdown_main_ul pt-2 ps-1">
                             <li v-for="dropdownItem in menuItem.dropDown" :key="dropdownItem"> {{ dropdownItem }}</li>
                         </ul>
                     </div>
 
                     <div class="dropdown_menu position-absolute megamenu" v-if="menuItem.dropDownList">
-                        <ul class="list-unstyled d-flex">
-                            <li v-for="dropdownItem in menuItem.dropDownList" :key="dropdownItem"> 
+                        <ul class="list-unstyled d-flex megamenu_ul">
+                            <li class="megamenu_item" v-for="dropdownItem in menuItem.dropDownList" :key="dropdownItem"> 
 
                                 <ul class="list-unstyled">
-                                    <li> 
+                                    <li class="megamenu_label pt-4 ps-2"> 
                                         <span class="fw-bold text-uppercase">{{ dropdownItem.label }}</span>
-                                        
                                     </li>
 
-                                    <li class="megamenu_list" v-for="link in dropdownItem.links" :key="link"> 
+                                    <li class="megamenu_list ps-1" v-for="link in dropdownItem.links" :key="link"> 
                                         <span>{{ link }}</span>
                                     </li>
                                 </ul>
@@ -109,16 +108,20 @@ header {
                 // border: 1px solid red;
                 
                 
-                li {
+                .nav_item {
                     width: 100%;
                     height: 100%;
                     display: flex;
                     align-items: center;
                     margin: 0 20px;
+                    // transition: all .5s;
                     
                     &:hover {
                         .dropdown_menu{
-                            display: block;
+                            height: 460px;
+                        }
+                        .dropdown_menu.megamenu {
+                            height: 560px;
                         }
                     }
                     
@@ -132,27 +135,48 @@ header {
                     }
                     
                     .dropdown_menu {
-                        display: none;
+                        // display: none;
                         top: 100%;
                         min-width: 200px;
-                        background-color: #FCFAF6;
                         z-index: 500;
                         overflow: hidden;
-                        transition: all .4s;
-
-                        ul {
+                        transition: all .6s;
+                        height: 0;
+                        
+                        .dropdown_main_ul {
+                            // z-index: 600;
+                            background-color: rgb(252, 250, 246);
+                            // background-color: red;
                             li{
                                 padding: 8px 0;
+                                margin: 5px;
+                                // background-color: blue;
                             }
                         }
                     }
 
                     .dropdown_menu.megamenu{
-                        .megamenu_list{
-                            min-width: 200px;
-
-                            span {
-                                color: gray;
+                        display: flex;
+                        justify-content: center;
+                        width: 100vw;
+                        left: -50vw;
+                        // background-color: none;
+                        .megamenu_ul {                  
+                            background-color: rgb(252, 250, 246);
+                            // background-image: url(../assets/img/h-2-background-1.jpg);
+                            // background-repeat: no-repeat;
+                            // background-size: cover;
+                        }
+                        .megamenu_item{
+                            // transform: translateX(-50%);
+                            .megamenu_list{
+                                min-width: 200px;
+                                padding: 8px 0;
+                                margin: 5px;
+    
+                                span {
+                                    color: gray;
+                                }
                             }
                         }
                     }
