@@ -60,7 +60,7 @@ export default {
             </div>
 
             <div class="images_container">
-                <img src="../../assets/img/img-Jumbotron/h-2-slider-img-11.png" alt="">
+                <img id="jumbo_image" src="../../assets/img/img-Jumbotron/h-2-slider-img-11.png" alt="">
             </div>
         </swiper-slide>
 
@@ -155,8 +155,8 @@ export default {
 
             &:nth-child(2) {
                 .images_container {
-                    img {
-                        width: 80%;
+                    #jumbo_image {
+                        width: 85%;
                     }
                 }
             }

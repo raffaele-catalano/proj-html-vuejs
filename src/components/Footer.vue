@@ -1,6 +1,12 @@
 <script>
+import SocialDb from '../data/Social-db.json'
 export default {
     name: 'Footer',
+    data(){
+        return {
+            SocialDb
+        }
+    },
     methods: {
         scrollToTop() {
             window-scrollTo ({
@@ -32,8 +38,10 @@ export default {
                 </div>
                 <div class="col">
                     <p>Stay in touch with us</p>
-                    <!-- //TODO: CICLARE SOCIAL DINAMICAMENTE -->
-                    <p>T P F L</p>
+                    <div class="icons_container">
+                        <!-- //TODO: CICLARE SOCIAL DINAMICAMENTE -->
+                        <i :class="icon.icon" v-for="(icon, index) in SocialDb" :key="index"></i>
+                    </div>
                 </div>
 
             </div>
@@ -81,6 +89,36 @@ footer {
                 height: 100%;
                 //debug
                 // border: 1px solid gold;
+                .col {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    //debug
+                    // border: 1px solid red;
+                    
+                    &:last-of-type {
+                        margin-bottom: 15px;
+                        //debug
+                        // background-color: lightcoral;
+                    }
+                    .icons_container{
+                        //debug
+                        // border: 1px solid red;
+                        i {
+                            margin: 0 15px;
+                            font-size: 1.1rem;
+                            cursor: pointer;
+                            transition: all .3s;
+
+                            &:hover {
+                                transform: scale(1.2);
+                                color: white;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -64,6 +64,12 @@ section {
             font-size: 0.8rem;
             letter-spacing: .2rem;
             padding: 16px 60px;
+            transition: all .3s;
+
+            &:hover {
+                background-color: #F2D0C7;
+                color: white;
+            }
         }
     }
 }
