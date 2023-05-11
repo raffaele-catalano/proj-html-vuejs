@@ -25,8 +25,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// @use "../../scss/main.scss" as *;
-// @use "../../scss/partials/typography" as *;
 
 .cards {
     width: 100%;
@@ -39,6 +37,11 @@ export default {
                     width: 350px;
                     padding: 10px 20px;
                     opacity: 1;
+
+                    h3,
+                    p {
+                    opacity: 1;
+                    }
                 }
             }
             //debug
@@ -53,7 +56,18 @@ export default {
                 background-color: white;
                 transition: all .6s;
                 width: 0;
+                height: 100px;
                 opacity: 0;
+                
+                h3,
+                p {
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    opacity: 0;
+                    transition: all .3s;
+                }
             }
 
             img {
