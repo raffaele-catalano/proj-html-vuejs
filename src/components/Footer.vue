@@ -39,7 +39,6 @@ export default {
                 <div class="col">
                     <p>Stay in touch with us</p>
                     <div class="icons_container">
-                        <!-- //TODO: CICLARE SOCIAL DINAMICAMENTE -->
                         <i :class="icon.icon" v-for="(icon, index) in SocialDb" :key="index"></i>
                     </div>
                 </div>

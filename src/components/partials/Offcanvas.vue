@@ -1,6 +1,13 @@
 <script>
+import SocialDb from '../../data/Social-db.json'
+
 export default {
-    name: 'Offcanvas'
+    name: 'Offcanvas',
+    data() {
+        return {
+            SocialDb
+        }
+    }
 }
 </script>
 
@@ -13,12 +20,11 @@ export default {
         <div class="logo_container mb-3">
             <img src="../../assets/img/logo-sidearea-1.png" alt="logo">
         </div>
-        <div class="textual_info w-75">
+        <div class="textual_info w-75 mb-3">
             <p class="text-center">This is Marée, a colorful new portfolio for presenting your work. If you’re a modern illustrator or a designer, we made Marée for you.</p>
         </div>
-        <!-- div social da ciclare dinamicamente -->
-        <div class="social_container">
-            <p>T P F L</p>
+        <div class="icons_container">
+            <i :class="icon.icon" v-for="(icon, index) in SocialDb" :key="index"></i>
         </div>
 
     </div>
@@ -27,4 +33,17 @@ export default {
 
 <style lang="scss" scoped>
 
+.icons_container {
+    i {
+        cursor: pointer;
+        padding: 10px 10px;
+        font-size: 1.2rem;
+        transition: all .3s;
+
+        &:hover {
+            transform: scale(1.3);
+            color: #a0e7bf;
+        }
+    }
+}
 </style>
