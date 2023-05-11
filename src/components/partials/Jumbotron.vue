@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import "swiper/css/effect-fade";
-import {Pagination, Navigation, Autoplay} from 'swiper';
+import {Pagination, Navigation, Autoplay, EffectFade} from 'swiper';
 
 export default {
     name: 'Jumbotron',
@@ -14,7 +14,7 @@ export default {
     },
     setup () {
         return {
-            modules: [Pagination, Navigation, Autoplay]
+            modules: [Pagination, Navigation, Autoplay, EffectFade]
         }
     }
 }
@@ -26,6 +26,7 @@ export default {
     <swiper
         :slidesPerView="1"
         :spaceBetween="0"
+        :effect="'fade'"
         :autoplay="{
         delay: 4000,
         disableOnInteraction: false,
@@ -72,7 +73,7 @@ export default {
                 <button type="button" class="btn">Read More</button>
             </div>
 
-            <div class="images_container_double">
+            <div class="images_container double">
                 <img src="../../assets/img/img-Jumbotron/h-2-slider-img-15.png" alt="">
                 <img src="../../assets/img/img-Jumbotron/h-2-slider-img-16.png" alt="">
             </div>
@@ -96,6 +97,8 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: white;
+            position: relative;
             .textual_container {
                 display: flex;
                 justify-content: center;
@@ -103,6 +106,9 @@ export default {
                 flex-direction: column;
                 width: 50%;
                 height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
                 //debug
                 // border: 1px solid red;
                 h1 {
@@ -139,6 +145,9 @@ export default {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                position: absolute;
+                right: 0;
+                top: 0;
                 width: 50%;
                 height: 100%;
                 //debug
@@ -147,9 +156,9 @@ export default {
                     width: 50%;
                 }
             }
-            .images_container_double {
+            .images_container.double {
                 img {
-                    width: 50%;
+                    width: 40%;
                 }
             }
 
