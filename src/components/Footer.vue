@@ -32,6 +32,7 @@ export default {
                 </div>
                 <div class="col">
                     <p>Stay in touch with us</p>
+                    <!-- //TODO: CICLARE SOCIAL DINAMICAMENTE -->
                     <p>T P F L</p>
                 </div>
 

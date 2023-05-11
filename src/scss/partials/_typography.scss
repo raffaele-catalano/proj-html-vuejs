@@ -4,3 +4,18 @@ body {
     //debug
     overflow-x:hidden;
 }
+
+.swiper-pagination-bullet{
+    background-color: #E1C0B0;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #E1C0B0;
+    transform: scale(1.4);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #E1C0B0;
+    transform: scale(.5);
+}

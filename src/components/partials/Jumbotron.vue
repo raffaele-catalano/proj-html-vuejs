@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import "swiper/css/effect-fade";
-import {Pagination, Navigation, Autoplay, EffectFade} from 'swiper';
+import {Pagination, Navigation, Autoplay} from 'swiper';
 
 export default {
     name: 'Jumbotron',
@@ -41,9 +41,9 @@ export default {
         <swiper-slide class="swiper-core">
             <!-- PRIMA SLIDE -->
             <div class="textual_container">
-                <h1>Projects made with <span>love</span></h1>
+                <h1 class="text-center">Projects made with <span class="different_font">love</span></h1>
                 <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!</p>
-                <button class="btn btn-outline-danger btn-warning">Read More</button>
+                <button type="button" class="btn">Read More</button>
             </div>
 
             <div class="images_container">
@@ -54,9 +54,9 @@ export default {
         <!-- SECONDA SLIDE -->
         <swiper-slide class="swiper-core">
             <div class="textual_container">
-                <h1>Projects made with <span>love</span></h1>
+                <h1 class="text-center">Our new folio full of <span class="different_font">joy</span></h1>
                 <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!</p>
-                <button class="btn btn-outline-danger btn-warning">Read More</button>
+                <button type="button" class="btn">Read More</button>
             </div>
 
             <div class="images_container">
@@ -67,14 +67,14 @@ export default {
         <!-- TERZA SLIDE -->
         <swiper-slide class="swiper-core">
             <div class="textual_container">
-                <h1>Projects made with <span>love</span></h1>
+                <h1 class="text-center">Devotion that never <span class="different_font">ends</span></h1>
                 <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!</p>
-                <button class="btn btn-outline-danger btn-warning">Read More</button>
+                <button type="button" class="btn">Read More</button>
             </div>
 
-            <div class="images_container">
+            <div class="images_container_double">
                 <img src="../../assets/img/img-Jumbotron/h-2-slider-img-15.png" alt="">
-                <img src="../../assets/img/img-Jumbotron/h-2-slider-img-16png" alt="">
+                <img src="../../assets/img/img-Jumbotron/h-2-slider-img-16.png" alt="">
             </div>
         </swiper-slide>
 
@@ -105,9 +105,34 @@ export default {
                 height: 100%;
                 //debug
                 // border: 1px solid red;
+                h1 {
+                    font-size: 5rem;
+                    width: 70%;
+                }
+                .different_font{
+                    font-weight: 900;
+                    font-style: italic;
+                    font-family: "Playfair Display", serif !important;
+                }
 
                 p {
-                    width: 80%;
+                    width: 70%;
+                    font-size: 1.2rem;
+                    color: gray;
+                }
+                .btn {
+                    padding: 15px 40px;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    letter-spacing: .1rem;
+                    border: 2px solid #E1C0B0;
+                    transition: all .4s;
+
+                    &:hover {
+                        background-color: #E1C0B0;
+                        color: white;
+                    }
                 }
             }
             .images_container {
@@ -120,6 +145,19 @@ export default {
                 // border: 1px solid blue;
                 img{
                     width: 50%;
+                }
+            }
+            .images_container_double {
+                img {
+                    width: 50%;
+                }
+            }
+
+            &:nth-child(2) {
+                .images_container {
+                    img {
+                        width: 80%;
+                    }
                 }
             }
         }
