@@ -6,15 +6,27 @@ import 'swiper/css/navigation';
 import "swiper/css/effect-fade";
 import {Pagination, Navigation, Autoplay, EffectFade} from 'swiper';
 
+import JumboDb from "../../data/Jumbo-db.json"
+
 export default {
     name: 'Jumbotron',
     components: {
         Swiper,
         SwiperSlide
     },
+    data () {
+        return {
+            JumboDb
+        }
+    },
     setup () {
         return {
             modules: [Pagination, Navigation, Autoplay, EffectFade]
+        }
+    },
+    methods: {
+        getImage(img){
+            return new URL(img, import.meta.url).href;
         }
     }
 }
@@ -39,43 +51,17 @@ export default {
         :modules="modules"
         class="mySwiper"
     >
-        <swiper-slide class="swiper-core">
+        <swiper-slide class="swiper-core" v-for="(slide, index) in JumboDb" :key="index">
             <!-- PRIMA SLIDE -->
             <div class="textual_container">
-                <h1 class="text-center">Projects made with <span class="different_font">love</span></h1>
-                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!</p>
-                <button type="button" class="btn">Read More</button>
+                <h1 class="text-center"> {{ slide.title }} <span class="different_font">{{ slide.italic }}</span></h1>
+                <p class="text-center">{{ slide.description }}</p>
+                <button type="button" class="btn">{{ slide.button }}</button>
             </div>
 
-            <div class="images_container">
-                <img src="../../assets/img/img-Jumbotron/short-slider-rev-1-img-3.png" alt="">
-            </div>
-        </swiper-slide>
-
-        <!-- SECONDA SLIDE -->
-        <swiper-slide class="swiper-core">
-            <div class="textual_container">
-                <h1 class="text-center">Our new folio full of <span class="different_font">joy</span></h1>
-                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!</p>
-                <button type="button" class="btn">Read More</button>
-            </div>
-
-            <div class="images_container">
-                <img id="jumbo_image" src="../../assets/img/img-Jumbotron/h-2-slider-img-11.png" alt="">
-            </div>
-        </swiper-slide>
-
-        <!-- TERZA SLIDE -->
-        <swiper-slide class="swiper-core">
-            <div class="textual_container">
-                <h1 class="text-center">Devotion that never <span class="different_font">ends</span></h1>
-                <p class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!</p>
-                <button type="button" class="btn">Read More</button>
-            </div>
-
-            <div class="images_container double">
-                <img src="../../assets/img/img-Jumbotron/h-2-slider-img-15.png" alt="">
-                <img src="../../assets/img/img-Jumbotron/h-2-slider-img-16.png" alt="">
+            <div class="images_container" :class="{'double': slide.image2 != ''}">
+                <img :src="getImage(`../../assets/img/img-Jumbotron/${slide.image}`)" alt="">
+                <img :src="getImage(`../../assets/img/img-Jumbotron/${slide.image2}`)" alt="">
             </div>
         </swiper-slide>
 
@@ -95,7 +81,7 @@ export default {
             widows: 90%;
             height: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
             background-color: white;
             position: relative;
@@ -142,23 +128,21 @@ export default {
                 }
             }
             .images_container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                right: 0;
-                top: 0;
                 width: 50%;
                 height: 100%;
                 //debug
                 // border: 1px solid blue;
                 img{
-                    width: 50%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
             .images_container.double {
                 img {
-                    width: 40%;
+                    width: 50%;
+                    height: 100%;
+                    object-fit: contain;
                 }
             }
 

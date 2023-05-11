@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Projects made with",
+        "italic": "love",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!",
+        "button": "Read More",
+        "image": "short-slider-rev-1-img-3.png",
+        "image2": ""
+    },
+    {
+        "title": "Our new folio full of",
+        "italic": "joy",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!",
+        "button": "Read More",
+        "image": "h-2-slider-img-11.png",
+        "image2": ""
+    },
+    {
+        "title": "Devotion that never",
+        "italic": "ends",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure debitis molestiae quia et excepturi dignissimos ut beatae blanditiis ab voluptatibus!",
+        "button": "Read More",
+        "image": "h-2-slider-img-15.png",
+        "image2": "h-2-slider-img-16.png"
+
+    }
+]
