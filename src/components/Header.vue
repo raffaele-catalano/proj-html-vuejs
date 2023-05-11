@@ -1,5 +1,5 @@
 <script>
-import { menuHeader } from '../data/database';
+import { menuHeader } from '../data/HeaderDatabase';
 import Jumbotron      from './partials/Jumbotron.vue';
 import Offcanvas      from './partials/Offcanvas.vue';
 
@@ -63,6 +63,7 @@ export default {
                     <a href="#offcanvas" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvas"><img src="../assets/svg/dotted_menu.svg" alt="dotted-menu"></a> 
                     <!-- OFFCANVAS -->
                     <Offcanvas />
+                    <!--  -->
                 </div>
             </ul>
         </div>
@@ -70,6 +71,7 @@ export default {
 </header>
 <!-- JUMBOTRON -->
 <Jumbotron />
+<!--  -->
 </template>
 
 <style lang="scss" scoped>
