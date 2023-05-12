@@ -5,68 +5,68 @@ export default {
 </script>
 
 <template>
-<section>
-    <div class="articles_container">
-        <div class="row row-cols-3">
+    <section>
+        <div class="articles_container">
+            <div class="row row-cols-3">
 
-            <div class="col article">
+                <div class="col article">
 
-                <div class="bookmark_container">
-                    <div class="day">
-                        <h3>12</h3>
+                    <div class="bookmark_container">
+                        <div class="day">
+                            <h3>12</h3>
+                        </div>
+                        <div class="month-year">
+                            <p class="text-uppercase">may '23</p>
+                        </div>
                     </div>
-                    <div class="month-year">
-                        <p class="text-uppercase">may '23</p>
+
+                    <div class="article_thumb overflow-hidden">
+                        <img src="../../assets/img/img-Main/main-last-section/h-2-blog-img-1.jpg" alt="">
                     </div>
+
+                    <h4 class="text-capitalize my-3">this way, love: a detailed guide through new design</h4>
+                    <p class="author text-capitalize">by emily fields</p>
+                </div>
+                
+                <div class="col article">
+
+                    <div class="bookmark_container">
+                        <div class="day">
+                            <h3>12</h3>
+                        </div>
+                        <div class="month-year">
+                            <p class="text-uppercase">may '23</p>
+                        </div>
+                    </div>
+
+                    <div class="article_thumb overflow-hidden">
+                        <img src="../../assets/img/img-Main/main-last-section/h-2-blog-img-2.jpg" alt="">
+                    </div>
+                    <h4 class="text-capitalize my-3">i try to give people a different way of looking art</h4>
+                    <p class="author text-capitalize">by emily fields</p>
                 </div>
 
-                <div class="article_thumb overflow-hidden">
-                    <img src="../../assets/img/img-Main/main-last-section/h-2-blog-img-1.jpg" alt="">
+                <div class="col article">
+
+                    <div class="bookmark_container">
+                        <div class="day">
+                            <h3>12</h3>
+                        </div>
+                        <div class="month-year">
+                            <p class="text-uppercase">may '23</p>
+                        </div>
+                    </div>
+
+                    <div class="article_thumb overflow-hidden">
+                        <img src="../../assets/img/img-Main/main-last-section/h-2-blog-img-3.jpg" alt="">
+                    </div>
+                    <h4 class="text-capitalize my-3">introduce richard laperrière of those amazing features</h4>
+                    <p class="author text-capitalize">by emily fields</p>
                 </div>
 
-                <h4 class="text-capitalize my-3">this way, love: a detailed guide through new design</h4>
-                <p class="author text-capitalize">by emily fields</p>
             </div>
-            
-            <div class="col article">
-
-                <div class="bookmark_container">
-                    <div class="day">
-                        <h3>12</h3>
-                    </div>
-                    <div class="month-year">
-                        <p class="text-uppercase">may '23</p>
-                    </div>
-                </div>
-
-                <div class="article_thumb overflow-hidden">
-                    <img src="../../assets/img/img-Main/main-last-section/h-2-blog-img-2.jpg" alt="">
-                </div>
-                <h4 class="text-capitalize my-3">i try to give people a different way of looking art</h4>
-                <p class="author text-capitalize">by emily fields</p>
-            </div>
-
-            <div class="col article">
-
-                <div class="bookmark_container">
-                    <div class="day">
-                        <h3>12</h3>
-                    </div>
-                    <div class="month-year">
-                        <p class="text-uppercase">may '23</p>
-                    </div>
-                </div>
-
-                <div class="article_thumb overflow-hidden">
-                    <img src="../../assets/img/img-Main/main-last-section/h-2-blog-img-3.jpg" alt="">
-                </div>
-                <h4 class="text-capitalize my-3">introduce richard laperrière of those amazing features</h4>
-                <p class="author text-capitalize">by emily fields</p>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
 </template>
 
 <style lang="scss" scoped>

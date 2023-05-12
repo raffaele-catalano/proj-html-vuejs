@@ -18,40 +18,40 @@ export default {
 </script>
 
 <template>
-<footer>
-    <div class="footer_container">
-        <div class="logo_container">
-            <img src="../assets/img/logo-sidearea-1.png" alt="logo">
-        </div>
+    <footer>
+        <div class="footer_container">
+            <div class="logo_container">
+                <img src="../assets/img/logo-sidearea-1.png" alt="logo">
+            </div>
 
-        <div class="info_container">
+            <div class="info_container">
 
-            <div class="row row-cols-3">
+                <div class="row row-cols-3">
 
-                <div class="col">
-                    <p>maree@qodeinteractive.com</p>
-                    <p>+44 645 321 789</p>
-                </div>
-                <div class="col">
-                    <p>Avenue d'Auderghem 10</p>
-                    <p>1040 Brussels, Belgium</p>
-                </div>
-                <div class="col">
-                    <p>Stay in touch with us</p>
-                    <div class="icons_container">
-                        <i :class="icon.icon" v-for="(icon, index) in SocialDb" :key="index"></i>
+                    <div class="col">
+                        <p>maree@qodeinteractive.com</p>
+                        <p>+44 645 321 789</p>
                     </div>
-                </div>
+                    <div class="col">
+                        <p>Avenue d'Auderghem 10</p>
+                        <p>1040 Brussels, Belgium</p>
+                    </div>
+                    <div class="col">
+                        <p>Stay in touch with us</p>
+                        <div class="icons_container">
+                            <i :class="icon.icon" v-for="(icon, index) in SocialDb" :key="index"></i>
+                        </div>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-    <div class="pageUp_container">
-        <a href="#" @click="scrollToTop">
-            <img src="../assets/svg/arrow-up.svg" alt="arrow-up">
-        </a>
-    </div>
-</footer>
+        <div class="pageUp_container">
+            <a href="#" @click="scrollToTop">
+                <img src="../assets/svg/arrow-up.svg" alt="arrow-up">
+            </a>
+        </div>
+    </footer>
 </template>
 
 <style lang="scss" scoped>

@@ -5,18 +5,18 @@ export default {
 </script>
 
 <template>
-<section>
-    <div class="contact_container">
+    <section>
+        <div class="contact_container">
 
-        <h2>Want to work with us? Send us <span class="a-message">a message!</span></h2>
+            <h2>Want to work with us? Send us <span class="a-message">a message!</span></h2>
 
-        <p class="text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio eos quod ea, quasi animi necessitatibus ullam est ab, neque similique nesciunt dolores autem? Nihil alias eum quam sapiente at!
-        </p>
+            <p class="text-center">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, odio eos quod ea, quasi animi necessitatibus ullam est ab, neque similique nesciunt dolores autem? Nihil alias eum quam sapiente at!
+            </p>
 
-        <button type="button" class="btn text-uppercase">contact</button>
-    </div>
-</section>
+            <button type="button" class="btn text-uppercase">contact</button>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>

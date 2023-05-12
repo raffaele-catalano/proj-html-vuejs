@@ -11,17 +11,17 @@ export default {
 </script>
 
 <template>
-<section class="cards">
-    <div class="row row-cols-3">
-        <div class="col p-0" v-for="(card, index) in MainSection1db" :key="index">
-            <img :src="`main-first-section-img/${card.src}.jpg`" :alt="card.src">
-            <div class="description_container">
-                <h3>{{ card.title }}</h3>
-                <p>{{ card.description }}</p>
+    <section class="cards">
+        <div class="row row-cols-3">
+            <div class="col p-0" v-for="(card, index) in MainSection1db" :key="index">
+                <img :src="`main-first-section-img/${card.src}.jpg`" :alt="card.src">
+                <div class="description_container">
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.description }}</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 </template>
 
 <style lang="scss" scoped>

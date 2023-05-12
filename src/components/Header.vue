@@ -19,58 +19,58 @@ export default {
 </script>
 
 <template>
-<header>
+    <header>
 
-    <div class="logo_container">
-        <img src="../assets/img/logo-sidearea-1.png" alt="main-logo">
-    </div>
-
-    <div class="menu_container">
-        <div class="nav-bar">
-
-            <ul class="nav-list">
-
-                <li class="position-relative nav_item" v-for="(menuItem, index) in menuHeader" :key="index">
-                    <a href="#">{{ menuItem.label }}</a>
-                    <!-- inizio dropdown menu -->
-                    <div class="dropdown_menu position-absolute" v-if="menuItem.dropDown">
-                        <ul class="list-unstyled dropdown_main_ul pt-2 ps-1">
-                            <li v-for="dropdownItem in menuItem.dropDown" :key="dropdownItem"> {{ dropdownItem }}</li>
-                        </ul>
-                    </div>
-
-                    <div class="dropdown_menu position-absolute megamenu" v-if="menuItem.dropDownList">
-                        <ul class="list-unstyled d-flex megamenu_ul">
-                            <li class="megamenu_item" v-for="dropdownItem in menuItem.dropDownList" :key="dropdownItem"> 
-
-                                <ul class="list-unstyled">
-                                    <li class="megamenu_label pt-4 ps-2"> 
-                                        <span class="fw-bold text-uppercase">{{ dropdownItem.label }}</span>
-                                    </li>
-
-                                    <li class="megamenu_list ps-1" v-for="link in dropdownItem.links" :key="link"> 
-                                        <span>{{ link }}</span>
-                                    </li>
-                                </ul>
-
-                            </li>
-                        </ul>
-                    </div>
-
-                </li>
-                <div class="dotted-menu_container">
-                    <a href="#offcanvas" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvas"><img src="../assets/svg/dotted_menu.svg" alt="dotted-menu"></a> 
-                    <!-- OFFCANVAS -->
-                    <Offcanvas />
-                    <!--  -->
-                </div>
-            </ul>
+        <div class="logo_container">
+            <img src="../assets/img/logo-sidearea-1.png" alt="main-logo">
         </div>
-    </div>
-</header>
-<!-- JUMBOTRON -->
-<Jumbotron />
-<!--  -->
+
+        <div class="menu_container">
+            <div class="nav-bar">
+
+                <ul class="nav-list">
+
+                    <li class="position-relative nav_item" v-for="(menuItem, index) in menuHeader" :key="index">
+                        <a href="#">{{ menuItem.label }}</a>
+                        <!-- inizio dropdown menu -->
+                        <div class="dropdown_menu position-absolute" v-if="menuItem.dropDown">
+                            <ul class="list-unstyled dropdown_main_ul pt-2 ps-1">
+                                <li v-for="dropdownItem in menuItem.dropDown" :key="dropdownItem"> {{ dropdownItem }}</li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown_menu position-absolute megamenu" v-if="menuItem.dropDownList">
+                            <ul class="list-unstyled d-flex megamenu_ul">
+                                <li class="megamenu_item" v-for="dropdownItem in menuItem.dropDownList" :key="dropdownItem"> 
+
+                                    <ul class="list-unstyled">
+                                        <li class="megamenu_label pt-4 ps-2"> 
+                                            <span class="fw-bold text-uppercase">{{ dropdownItem.label }}</span>
+                                        </li>
+
+                                        <li class="megamenu_list ps-1" v-for="link in dropdownItem.links" :key="link"> 
+                                            <span>{{ link }}</span>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <div class="dotted-menu_container">
+                        <a href="#offcanvas" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvas"><img src="../assets/svg/dotted_menu.svg" alt="dotted-menu"></a> 
+                        <!-- OFFCANVAS -->
+                        <Offcanvas />
+                        <!--  -->
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- JUMBOTRON -->
+    <Jumbotron />
+    <!--  -->
 </template>
 
 <style lang="scss" scoped>

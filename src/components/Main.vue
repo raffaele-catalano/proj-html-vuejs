@@ -1,8 +1,8 @@
 <script>
-import Cards            from './partials/Main-section-1.vue';
-import WorkingProcess   from './partials/Main-section-2.vue';
-import Contact          from './partials/Main-section-3.vue';
-import Articles         from './partials/Main-section-4.vue';
+import Cards            from './partials/Cards.vue';
+import WorkingProcess   from './partials/WorkingProcess.vue';
+import Contact          from './partials/Contact.vue';
+import Articles         from './partials/Articles.vue';
 
 export default {
     name: 'Main',
@@ -16,10 +16,10 @@ export default {
 </script>
 
 <template>
-<Cards />
-<WorkingProcess />
-<Contact />
-<Articles />
+    <Cards />
+    <WorkingProcess />
+    <Contact />
+    <Articles />
 </template>
 
 <style lang="scss" scoped>

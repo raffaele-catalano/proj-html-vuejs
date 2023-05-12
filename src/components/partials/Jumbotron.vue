@@ -33,41 +33,41 @@ export default {
 </script>
 
 <template>
-<div class="jumbotron">
+    <div class="jumbotron">
 
-    <swiper
-        :slidesPerView="1"
-        :spaceBetween="0"
-        :effect="'fade'"
-        :autoplay="{
-        delay: 4000,
-        disableOnInteraction: false,
-        }"
-        :loop="true"
-        :pagination="{
-            clickable: true,
-        }"
-        :navigation="true"
-        :modules="modules"
-        class="mySwiper"
-    >
-        <swiper-slide class="swiper-core" v-for="(slide, index) in JumboDb" :key="index">
-            <!-- PRIMA SLIDE -->
-            <div class="textual_container">
-                <h1 class="text-center"> {{ slide.title }} <span class="different_font">{{ slide.italic }}</span></h1>
-                <p class="text-center">{{ slide.description }}</p>
-                <button type="button" class="btn">{{ slide.button }}</button>
-            </div>
+        <swiper
+            :slidesPerView="1"
+            :spaceBetween="0"
+            :effect="'fade'"
+            :autoplay="{
+            delay: 4000,
+            disableOnInteraction: false,
+            }"
+            :loop="true"
+            :pagination="{
+                clickable: true,
+            }"
+            :navigation="true"
+            :modules="modules"
+            class="mySwiper"
+        >
+            <swiper-slide class="swiper-core" v-for="(slide, index) in JumboDb" :key="index">
+                <!-- PRIMA SLIDE -->
+                <div class="textual_container">
+                    <h1 class="text-center"> {{ slide.title }} <span class="different_font">{{ slide.italic }}</span></h1>
+                    <p class="text-center">{{ slide.description }}</p>
+                    <button type="button" class="btn">{{ slide.button }}</button>
+                </div>
 
-            <div class="images_container" :class="{'double': slide.image2 != ''}">
-                <img :src="getImage(`../../assets/img/img-Jumbotron/${slide.image}`)" alt="">
-                <img v-if="slide.image2 != ''" :src="getImage(`../../assets/img/img-Jumbotron/${slide.image2}`)" alt="">
-            </div>
-        </swiper-slide>
+                <div class="images_container" :class="{'double': slide.image2 != ''}">
+                    <img :src="getImage(`../../assets/img/img-Jumbotron/${slide.image}`)" alt="">
+                    <img v-if="slide.image2 != ''" :src="getImage(`../../assets/img/img-Jumbotron/${slide.image2}`)" alt="">
+                </div>
+            </swiper-slide>
 
-    </swiper>
+        </swiper>
 
-</div>
+    </div>
 </template>
 
 <style lang="scss" scoped>

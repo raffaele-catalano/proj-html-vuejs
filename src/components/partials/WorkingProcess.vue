@@ -5,53 +5,53 @@ export default {
 </script>
 
 <template>
-<section class="working-process">
+    <section class="working-process">
 
-    <div class="wrapper">
+        <div class="wrapper">
 
-        <div class="title_container">
-            <h2 class="text-center">Working <span class="process">process</span></h2>
+            <div class="title_container">
+                <h2 class="text-center">Working <span class="process">process</span></h2>
+            </div>
+
+            <div class="graph_container">
+
+                <div class="process-container">
+                    <div class="rounded_container my-2">
+                        <i class="fa-solid fa-lightbulb fa-flip-horizontal" style="color: #BADAC9"></i>
+                    </div>
+                    <h5>First theres an idea</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
+                </div>
+                
+                <div class="process-container">
+                    <div class="rounded_container my-2">
+                        <i class="fa-regular fa-comment" style="color: #ffc400"></i>
+                    </div>
+                    <h5>Then we talk about</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
+                </div>
+
+                <div class="process-container">
+                    <div class="rounded_container my-2">
+                        <i class="fa-solid fa-cloud" style="color: #80465F"></i>
+                    </div>
+                    <h5>And we think about</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
+                </div>
+
+                <div class="process-container">
+                    <div class="rounded_container my-2">
+                        <i class="fa-solid fa-pencil" style="color: #EB6950"></i>
+                    </div>
+                    <h5>So we draw along</h5>
+                    <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="graph_container">
-
-            <div class="process-container">
-                <div class="rounded_container my-2">
-                    <i class="fa-solid fa-lightbulb fa-flip-horizontal" style="color: #BADAC9"></i>
-                </div>
-                <h5>First theres an idea</h5>
-                <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
-            </div>
-            
-            <div class="process-container">
-                <div class="rounded_container my-2">
-                    <i class="fa-regular fa-comment" style="color: #ffc400"></i>
-                </div>
-                <h5>Then we talk about</h5>
-                <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
-            </div>
-
-            <div class="process-container">
-                <div class="rounded_container my-2">
-                    <i class="fa-solid fa-cloud" style="color: #80465F"></i>
-                </div>
-                <h5>And we think about</h5>
-                <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
-            </div>
-
-            <div class="process-container">
-                <div class="rounded_container my-2">
-                    <i class="fa-solid fa-pencil" style="color: #EB6950"></i>
-                </div>
-                <h5>So we draw along</h5>
-                <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga labore maiores nostrum fugit?</p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 </template>
 
 <style lang="scss" scoped>
