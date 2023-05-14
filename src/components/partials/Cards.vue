@@ -1,7 +1,11 @@
 <script>
 import MainSection1db from '../../data/MainSection-1-db.json'
+import Card from '../partials/micro-components/Card.vue'
 export default {
     name: 'Cards',
+    components: {
+        Card
+    },
     data() {
         return {
             MainSection1db,
@@ -13,13 +17,7 @@ export default {
 <template>
     <section class="cards">
         <div class="row row-cols-3">
-            <div class="col p-0" v-for="(card, index) in MainSection1db" :key="index">
-                <img :src="`main-first-section-img/${card.src}.jpg`" :alt="card.src">
-                <div class="description_container">
-                    <h3>{{ card.title }}</h3>
-                    <p>{{ card.description }}</p>
-                </div>
-            </div>
+            <Card v-for="(card, index) in MainSection1db" :key="index" :Image="card.src" :Title="card.title" :Description="card.description" />
         </div>
     </section>
 </template>
@@ -28,57 +26,6 @@ export default {
 
 .cards {
     width: 100%;
-    .row{
-        .col{
-            position: relative;
-            
-            &:hover {
-                .description_container{
-                    width: 350px;
-                    padding: 10px 20px;
-                    opacity: 1;
-
-                    h3,
-                    p {
-                    opacity: 1;
-                    }
-                }
-            }
-            //debug
-            // border: 2px solid blue;
-            .description_container{
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                background-color: white;
-                transition: all .6s;
-                width: 0;
-                height: 100px;
-                opacity: 0;
-                
-                h3,
-                p {
-                    width: 100%;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    opacity: 0;
-                    transition: all .3s;
-                }
-                p {
-                    font-style: italic;
-                    font-family: "Playfair Display", serif !important;
-                }
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-    }
 }
 
 </style>
